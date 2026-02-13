@@ -203,3 +203,85 @@ main {
     max-width: 200px;
   }
 }
+.projects {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  width: 100%;
+  max-width: 1200px; /* keeps layout centered and clean */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.project-card {
+  width: 30%;
+  min-width: 250px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  border-bottom: 1px solid #e5e5e5;
+}
+.card-content {
+  position: relative;
+  padding-top: 20px;
+}
+
+.card-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* shorter than full width = premium look */
+  height: 1px;
+  background: #e5e5e5;
+}
+.project-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2e2e2e; /* same modern dark gray as hero */
+  margin-bottom: 10px;
+  text-align: center;
+}
+.project-card p {
+  font-family: "Kalam", cursive;
+  font-size: 1rem;
+  color: #3a3a3a;
+  line-height: 1.7;
+  text-align: center;
+}
