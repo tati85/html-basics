@@ -285,3 +285,36 @@ main {
   line-height: 1.7;
   text-align: center;
 }
+.footer {
+  background-color: #e9e3e3;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  margin-top: 60px;
+}
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.footer-text,
+.footer .container p {
+  font-size: 1rem;
+  color: #3a3a3a;
+  font-family: kalam, cursive;
+  text-align: center;
+  line-height: 1.2;
+}
+.footer-text a {
+  color: #3a3a3a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: kalam, cursive;
+}
+.footer-text a:hover {
+  color: #3a6ea5;
+  opacity: 0.8;
+}
