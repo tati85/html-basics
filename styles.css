@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -20,13 +21,12 @@ header {
   align-items: center;
   height: 70px;
   border-bottom: 1px solid #eee;
-  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
 }
 .container {
   width: 100%;
-  max-width: 1200px; /* controls how wide the content can get */
-  margin: 0 auto; /* centers everything */
-  padding: 0 40px; /* left/right spacing */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 .logo-wrapper {
   width: 150px;
@@ -87,13 +87,22 @@ header {
 .nav-list a:hover::after {
   width: 100%;
 }
+@media (max-width: 700px) {
+  header {
+    height: auto;
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
 
 main {
-  /*padding: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;*/
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -101,13 +110,7 @@ main {
 }
 .hero,
 .projects {
-  /*flex: 1;
-  min-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 20px;*/
-  flex: 1; /* each takes 50% of main */
+  flex: 1;
   min-height: 0;
   padding: 40px 0;
 }
@@ -115,12 +118,68 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 20px;
 }
 .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   flex: 1;
-  max-width: 550px;
 }
+.hero-content strong {
+  color: #3a6ea5;
+  font-weight: 600;
+}
+
+.hero-content h3 {
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2e2e2e;
+  line-height: 1.3;
+  gap: 20px;
+}
+
+.hero-content p {
+  font-family: "Kalam", sans-serif;
+  font-size: 1.05rem;
+  color: #3a3a3a;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.hero-icons {
+  margin-top: 25px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.hero-icons .icon {
+  width: 32px;
+  height: 32px;
+  color: #3a6ea5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.hero-icons .icon:hover {
+  transform: translateY(-2px);
+  color: #2f5c8a;
+}
+
+.hero-icons svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
 .profile-image {
   max-height: 90%;
   max-width: 280px;
@@ -128,4 +187,19 @@ main {
   height: auto;
   border-radius: 10px;
   object-fit: cover;
+}
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .profile-image {
+    max-width: 200px;
+  }
 }
