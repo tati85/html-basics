@@ -10,8 +10,16 @@ A simple and reponsive personal portfolio showcasing my work(under construction)
 
 **Tech Stack**
 
-- HTML
-- CSS (Flexbox)
+- HTML 5
+- CSS3 (Flexbox, responsive media queries)
 
-**Live Demo**
-https://tati85.github.com/html-basics/index.html
+**Project Structure**
+
+PORTFOLIO/
+│── images/  
+│── index.html  
+│── styles.css  
+│── README.md
+
+🔗 **Live Demo**
+https://tati85.github.io/html-basics/
