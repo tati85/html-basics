@@ -8,7 +8,7 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #e9e3e3;
 }
 header {
@@ -285,10 +285,26 @@ main {
   line-height: 1.7;
   text-align: center;
 }
+
+@media (max-width: 900px) {
+  .projects-grid {
+    flex-wrap: wrap;
+  }
+
+  .project-card {
+    flex: 1 1 calc(50%-2rem);
+    max-width: none;
+  }
+}
+@media (max-width: 600px) {
+  .project-card {
+    flex: 1 1 100%;
+  }
+}
+
 .footer {
   background-color: #e9e3e3;
   padding: 20px 0;
-  border-top: 1px solid #eee;
   margin-top: 60px;
 }
 footer .container {
@@ -299,6 +315,7 @@ footer .container {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  border-top: 1px solid #eee;
 }
 .footer-text,
 .footer .container p {
@@ -317,4 +334,18 @@ footer .container {
 .footer-text a:hover {
   color: #3a6ea5;
   opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .footer .container {
+    padding: 1.8rem 1rem;
+  }
+  .footer-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .footer-text a {
+    display: inline-block;
+    margin: 0.2rem 0;
+  }
 }
