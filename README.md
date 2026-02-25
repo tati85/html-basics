@@ -14,4 +14,4 @@ A simple and reponsive personal portfolio showcasing my work(under construction)
 - CSS (Flexbox)
 
 **Live Demo**
-https://tati85.github.com/html-basics/
+https://tati85.github.com/html-basics/index.html
